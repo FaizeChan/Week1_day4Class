@@ -12,7 +12,7 @@ namespace Week2_day4Class
         private string furLength;
         private float height;
         private string runningSpeed;
-        private int weight;
+        private double weight;
 
         //Properties
         public string FurLength
@@ -25,7 +25,7 @@ namespace Week2_day4Class
         {
             get { return this.height; }
             set { this.height = value; }
-            
+
         }
 
         public string RunningSpeed
@@ -34,7 +34,7 @@ namespace Week2_day4Class
             set { this.runningSpeed = value; }
         }
 
-        public int Weight
+        public double Weight
         {
             get { return this.weight; }
             set { this.weight = value; }
@@ -53,5 +53,29 @@ namespace Week2_day4Class
             this.furLength = furLength;
             this.height = height;
         }
+
+        //Methods
+
+        public void Run()
+        {
+            runningSpeed = "getting faster.";
+            weight--;
+        }
+
+        public void Bark()
+        {
+            Console.WriteLine("\a");
+        }
+
+        public void Potty()
+        {
+            weight = weight - 0.1;
+        }
+
+        public void Groom()
+        {
+            furLength = "all cleaned up.";
+        }
+
     }
 }
